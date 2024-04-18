@@ -1,0 +1,22 @@
+FROM alpine:latest as dependencies
+
+RUN apk update && apk upgrade && \
+	apk add g++ git make cmake
+
+COPY ./utility /service/utility
+
+WORKDIR /service/utility
+
+RUN ./install-oatpp-modules.sh
+
+FROM alpine:latest as application
+
+RUN apk add --no-cache g++ make cmake
+
+COPY --from=dependencies /usr /usr
+
+COPY . /service
+
+WORKDIR /service/build
+
+RUN cmake .. && make -j $(nproc)
