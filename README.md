@@ -17,8 +17,6 @@ Example:
 -   Streaming to large number of clients (1K or more).
 -   Chats.
 
-For all other purposes use [Simple API](https://github.com/oatpp/oatpp-starter).
-
 ## Before you start
 
 Read:
@@ -64,7 +62,6 @@ mkdir build && cd build
 cmake ..
 make
 ./App-exe
-
 ```
 
 #### In Docker
