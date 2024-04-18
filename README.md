@@ -43,6 +43,9 @@ Read:
 |
 |- test/                                 // test folder
 |- utility/install-oatpp-modules.sh      // utility script to install required oatpp-modules.
+|- docker-compose-dev.yml                // docker compose file for development
+|- docker-compose-test.yml               // docker compose file for testing
+|- Dockerfile.build                            // Dockerfile for building the project
 ```
 
 ---
