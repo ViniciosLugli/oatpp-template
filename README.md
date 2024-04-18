@@ -77,3 +77,7 @@ and to run the tests in the container use the following command:
 ```
 docker compose -f docker-compose-test.yml up --build
 ```
+
+### Access the API
+
+You can access the API at [http://0.0.0.0:3000](http://0.0.0.0:3000)
